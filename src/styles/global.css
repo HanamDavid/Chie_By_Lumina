@@ -1,0 +1,46 @@
+/* src/styles/global.css */
+
+/* 1. Define tu paleta de colores como variables CSS (siempre al inicio) */
+:root {
+  --color-primary: #A83B36; /* Rojo */
+  --color-secondary: #003884; /* Azul */
+  --color-accent: #F7D25A; /* Amarillo */
+  --color-background: #F5F5E0; /* Crema */
+  --color-text: #4B3621; /* Café */
+  --color-verde: #049D6A; /* Verde */
+}
+
+/* 2. Centraliza la importación de las utilidades base de Tailwind */
+@tailwind base;
+
+/* 3. Agrega tus estilos base personalizados y la tipografía */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Estilos para enlaces */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para encabezados (manteniendo las clases de Tailwind en el componente) */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* 4. Importa los componentes y utilidades de Tailwind (al final) */
+@tailwind components;
+@tailwind utilities;
+
+/* 5. Estilos para el contenedor principal */
+main {
+  @apply mx-auto max-w-6xl px-4 py-8;
+}

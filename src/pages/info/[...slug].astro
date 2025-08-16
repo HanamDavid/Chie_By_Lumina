@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/layout.astro';
+import Navigation from '../../components/astro/Navigation.astro';
+
+// Exporta las rutas estáticas de la colección 'info'
+export async function getStaticPaths() {
+  const allInfoEntries = await getCollection('info');
+  return allInfoEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <Navigation />
+  <article class="prose lg:prose-xl mx-auto">
+    <h1>{entry.data.title}</h1>
+    <Content />
+  </article>
+  <Footer />
+</Layout>

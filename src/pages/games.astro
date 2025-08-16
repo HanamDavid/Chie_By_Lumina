@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/astro/Navigation.astro';
+import GameContainer from '../components/react/GameContainer.jsx';
+import Footer from '../components/astro/Footer.astro';
+---
+
+<Layout title="Sección de Juegos">
+  <Navigation />
+  <h1 class="text-center">¡Nuestra Colección de Juegos!</h1>
+  <p class="text-center mb-12">Sumérgete en un mundo de diversión y desafíos.</p>
+
+  <section class="min-h-[80vh] flex flex-col items-center justify-center">
+    <GameContainer client:visible />
+  </section>
+  <Footer />
+</Layout>
