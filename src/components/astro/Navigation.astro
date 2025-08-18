@@ -1,13 +1,61 @@
 ---
 ---
 
-<nav class="flex flex-row justify-between items-center py-6 mb-12">
-    <a href="/" class="text-3xl font-bold font-playfair-display">
-        <span style="color: var(--color-primary)">Ch</span><span style="color: var(--color-secondary)">i</span><span style="color: var(--color-accent)">e</span>
+<nav class="fixed top-0 left-1/2 transform -translate-x-1/2
+    w-[90%] max-w-7xl bg-stone-100 shadow-md rounded-b-3xl z-50
+    border-b-8 border-[var(--color-accent)]
+    ">
+  <div class="flex flex-row justify-between items-center px-8 py-2">
+
+    <!-- Botón CiberPaz con imagen -->
+    <div class="flex justify-center">
+      <a href="https://www.ciberpaz.gov.co/portal/" target="_blank"
+         class="flex items-center justify-center bg-[var(--color-secondary)]
+                w-16 h-16 rounded-full shadow-lg relative overflow-hidden
+                transition-all duration-500 ease-in-out transform hover:scale-110 hover:rotate-3 group">
+        <img src="https://www.ciberpaz.gov.co/855/channels-755_logo_micrositio.png"
+             alt="CiberPaz" class="w-6 h-6 relative z-10" />
+        <span class="absolute inset-0 bg-gradient-to-tr from-[var(--color-secondary)] to-[var(--color-accent)]
+                     opacity-0 group-hover:opacity-80 transition-opacity duration-500 rounded-full"></span>
+      </a>
+    </div>
+
+
+    <a href="/" class="flex items-center gap-2 transition-transform duration-500 hover:scale-105">
+        <img src="/images/logo.svg" alt="Logo Chie" class="h-24 w-auto" />
     </a>
 
-    <ul class="flex space-x-8 text-xs font-playfair-display">
-        <li><a href="/info/el-origen-de-la-creatividad" class="hover:text-stone-500 transition">Información</a></li>
-        <li><a href="/games" class="hover:text-stone-500 transition">Juegos</a></li>
+    <ul class="flex space-x-12 text-lg tracking-wide font-medium">
+      <li>
+        <a href="/info/el-origen-de-la-creatividad"
+           class="relative flex items-center gap-2 hover:text-[var(--color-primary)] hover:font-semibold transition group">
+          <i class="fa-solid fa-book text-[var(--color-primary)]"></i>
+          Aprende
+          <span class="absolute left-0 -bottom-1 w-0 h-[3px] bg-[var(--color-primary)]
+                       group-hover:w-full transition-all duration-500 ease-out rounded-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="/channel"
+           class="relative flex items-center gap-2 hover:text-[var(--color-primary)] hover:font-semibold transition group">
+          <i class="fa-solid fa-comments text-[var(--color-primary)]"></i>
+          Foro
+          <span class="absolute left-0 -bottom-1 w-0 h-[3px] bg-[var(--color-primary)]
+                       group-hover:w-full transition-all duration-500 ease-out rounded-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="/games"
+           class="relative flex items-center gap-2 hover:text-[var(--color-primary)] hover:font-semibold transition group">
+          <i class="fa-solid fa-gamepad text-[var(--color-primary)]"></i>
+          Juega
+          <span class="absolute left-0 -bottom-1 w-0 h-[3px] bg-[var(--color-primary)]
+                       group-hover:w-full transition-all duration-500 ease-out rounded-full"></span>
+        </a>
+      </li>
     </ul>
+
+  </div>
 </nav>
+
+

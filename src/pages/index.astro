@@ -3,10 +3,87 @@ import Layout from '../layouts/layout.astro';
 ---
 
 <Layout title="Chie">
-	<section class="h-[80vh] flex flex-col justify-center items-center text-center">
-		<h1 class="text-7xl md:text-8xl lg:text-9xl mb-6">Explora la tecnologia y el amor por el Conocimiento</h1>
-		<p class="max-w-3xl text-2xl italic">
-			Una experiencia inmersiva para descubrir contenidos fascinantes y divertirte con nuestros juegos.
-		</p>
-	</section>
+  <section class="h-[90vh] flex flex-col lg:flex-row justify-center items-center text-center lg:text-left gap-16 px-12">
+
+    <!-- Bloque de texto + cards -->
+    <div class="flex flex-col gap-6">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4 font-extrabold tracking-tight font-['Press_Start_2P']">
+        Explora la tecnología y el amor <br /> por el Conocimiento
+      </h1>
+      <p class="max-w-2xl text-xl md:text-2xl italic text-gray-600">
+        Una experiencia inmersiva para descubrir contenidos fascinantes y divertirte con nuestros juegos.
+      </p>
+
+      <!-- Contenedor tipo masonry -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 items-stretch">
+
+        <!-- Card 1 -->
+        <article class="mt-8 relative bg-emerald-500 text-white rounded-2xl shadow-lg p-6 flex flex-col justify-between
+                       transition-transform transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl duration-500">
+          <h3 class="text-2xl font-bold mb-4 font-['Press_Start_2P']">Historia y Cultura</h3>
+          <p class="text-lg mb-6 leading-relaxed">
+            Descubre los orígenes de nuestra creatividad, tradiciones y expresiones culturales que inspiran innovación.
+          </p>
+          <a href="#" class="text-sm font-bold underline hover:text-yellow-200">Leer más →</a>
+        </article>
+
+        <!-- Card 2 (más alto) -->
+        <article class="relative bg-violet-500 text-white rounded-2xl shadow-lg p-6 flex flex-col justify-between
+                       transition-transform transform hover:scale-105 hover:rotate-1 hover:shadow-2xl duration-500 md:row-span-2 h-[500px]">
+          <h3 class="text-2xl font-bold mb-4 font-['Press_Start_2P']">Tecnología y Futuro</h3>
+          <p class="text-lg mb-6 leading-relaxed">
+            Aprende sobre IA y tecnología para tu dia a dia explicado de forma clara y accesible.
+          </p>
+          <a href="#" class="text-sm font-bold underline hover:text-yellow-200">Explorar →</a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class=" mt-16 relative bg-cyan-500 text-white rounded-2xl shadow-lg p-6 flex flex-col justify-between
+                       transition-transform transform hover:scale-105 hover:-rotate-2 hover:shadow-2xl duration-500">
+          <h3 class="text-2xl font-bold mb-4 font-['Press_Start_2P']">Aprende Jugando</h3>
+          <p class="text-lg mb-6 leading-relaxed">
+            Juegos interactivos para reforzar conocimientos de manera divertida y dinámica.
+          </p>
+          <a href="#" class="text-sm font-bold underline hover:text-yellow-200">Jugar →</a>
+        </article>
+      </div>
+    </div>
+
+    <div class="flex justify-center lg:justify-end">
+      <img src="/images/landing_cuy.png" alt="Cuy ayudando a mas personas"
+           class="w-full max-w-2xl lg:max-w-3xl xl:max-w-6xl hover:scale-105 transition-transform duration-500" />
+    </div>
+  </section>
+        <section class="relative flex justify-center items-center py-20 px-6 bg-[var(--color-background)]">
+  <div class="relative max-w-5xl w-full overflow-hidden group
+              border-[20px] border-yellow-900 rounded-3xl
+              [box-shadow:inset_0_6px_20px_rgba(0,0,0,0.6),0_12px_30px_rgba(0,0,0,0.4)]">
+
+    <!-- Marco interior -->
+    <div class="w-full h-full border-[8px] border-yellow-500 rounded-2xl
+                [box-shadow:inset_0_4px_12px_rgba(0,0,0,0.5)]">
+
+      <img src="/images/landing_philo.png" alt="Ilustración filosófica"
+           class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105 rounded-xl" />
+
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent
+                  flex flex-col justify-center px-12 text-white">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">El Debate del Conocimiento</h2>
+        <p class="max-w-xl text-lg mb-6 text-gray-200 drop-shadow">
+          Explora las ideas de grandes pensadores adaptadas a un mundo digital,
+          con un estilo visual fresco y cercano a los jóvenes.
+        </p>
+        <a href="/info/el-origen-de-la-creatividad"
+           class="px-6 py-3 bg-[var(--color-primary)] text-white font-bold rounded-full
+                  shadow-md hover:shadow-2xl hover:bg-[var(--color-secondary)]
+                  transition duration-500 w-fit">
+          Descubrir más →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 </Layout>
+

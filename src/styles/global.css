@@ -19,6 +19,7 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Estilos para enlaces */
@@ -27,13 +28,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 /* Estilos para encabezados (manteniendo las clases de Tailwind en el componente) */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+h1{
+  font-family: "Molle", cursive;
 }
 
 /* 4. Importa los componentes y utilidades de Tailwind (al final) */
